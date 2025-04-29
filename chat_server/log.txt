@@ -1,0 +1,15 @@
+Connected with ('127.0.0.1', 58889)
+Nickname of the client is Prasanth
+Connected with ('127.0.0.1', 58930)
+Nickname of the client is Prasanth1
+Connected with ('127.0.0.1', 58981)
+Nickname of the client is Prasanth1
+Connected with ('127.0.0.1', 59103)
+Nickname of the client is Prasanth123
+Connected with ('127.0.0.1', 59106)
+Nickname of the client is Prasanth1234
+Connected with ('127.0.0.1', 59108)
+Nickname of the client is Prasanth
+Connected with ('127.0.0.1', 59110)
+Nickname of the client is Daphne
+Daphne left the chat.
