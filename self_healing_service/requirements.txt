@@ -1,0 +1,5 @@
+Workflow:
+    1.You run docker run flask-app.
+    2.Docker Engine pulls the Flask app image from your local machine or Docker Hub.
+    3.Docker Engine creates a new container using that image.
+    4.The Flask app runs inside the container, isolated from your system.
