@@ -12,17 +12,6 @@ Flow:
     4.Handle client disconnects cleanly.
 
 
-+-----------+          +-----------+          +-----------+
-|  Client 1 |          |  Client 2 |          |  Client N |
-+-----------+          +-----------+          +-----------+
-         \                   |                     /
-          \                  |                    /
-           \                 |                   /
-            \           +--------------------+
-             +--------->|    Chat Server      |
-                        +--------------------+
-
-
 A WebSocket is a communication protocol that enables real-time, two-way communication between a client (like a web browser) and a server over a single, long-lived connection
 
 Multithreading is a programming technique that allows a single program to perform multiple tasks concurrently by creating and managing multiple threads of execution.
