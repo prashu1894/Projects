@@ -16,5 +16,5 @@ A WebSocket is a communication protocol that enables real-time, two-way communic
 
 Multithreading is a programming technique that allows a single program to perform multiple tasks concurrently by creating and managing multiple threads of execution.
 
-Web socket is created with the serve when any client is connected to the server.
+Web socket is created with the server when any client is connected to the server.
 Each Client will run on their own thread. When a client comes in or leaves, server will broadcast the message.
