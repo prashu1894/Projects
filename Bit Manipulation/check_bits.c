@@ -48,6 +48,17 @@ bool powerof2(int num) {
     }
     return false;
 }
+
+uint32_t reverseBits(uint32_t n) {
+    uint32_t result=0;
+    for(int i = 0; i< 32; i++) {
+        if((n >> i) & 1) {
+            result |= 1 <<(31-i);
+        }
+    }
+    return result;
+}
+
 int main() {
     uint8_t num = 8;
     int bit = 3;
@@ -70,5 +81,8 @@ int main() {
     } else {
         printf("\n%d is NOT a power of 2", num);
     }
+    uint32_t n = 43261596;
+    uint32_t result = reverseBits(n);
+    printf("\nExpected 964176192, got %d", result);
     return 0;
 }
