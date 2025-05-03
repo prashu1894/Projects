@@ -2,6 +2,30 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/*   ---------------
+ *   |     AND     |
+ *   | A | B | A&B |
+ *   | 0 | 0 | 0   |
+ *   | 0 | 1 | 0   |
+ *   | 1 | 0 | 0   |
+ *   | 1 | 1 | 1   |
+ *   ---------------
+ *   |     OR      |
+ *   | A | B | A|B |
+ *   | 0 | 0 | 0   |
+ *   | 0 | 1 | 1   |
+ *   | 1 | 0 | 1   |
+ *   | 1 | 1 | 1   |
+ *   ---------------
+ *   |     XOR     |
+ *   | A | B | A^B |
+ *   | 0 | 0 | 0   |  
+ *   | 0 | 1 | 1   |
+ *   | 1 | 0 | 1   |
+ *   | 1 | 1 | 0   |
+ *   ---------------
+ */
+
 bool check_bit(uint8_t num, int bit) {
     // printf("%d %d\n", num, 1<<bit);
     if ((num) & (1 << bit)) {
@@ -59,6 +83,22 @@ uint32_t reverseBits(uint32_t n) {
     return result;
 }
 
+/* power of 4 check
+ * Unique property of power of 4 is that it has only one bit set and
+ * all the bits to the right of it are set
+ * also, bits does not and with 0xAAAAAAAA
+ * Example: 4 = 00000000000000000000000000000100
+ * For example: 16 (10000) is power of 4 because there is only one 
+ * bit set and 0x10 & 0xAAAAAAAA is zero.
+ */
+bool powerof4(int num) {
+    if (num == 0)
+        return false;
+    if (!(num & (num-1)) && !(num & 0xAAAAAAAA))
+        return true;
+    return false;
+}
+
 int main() {
     uint8_t num = 8;
     int bit = 3;
@@ -80,6 +120,12 @@ int main() {
         printf("\n%d is power of 2", num);
     } else {
         printf("\n%d is NOT a power of 2", num);
+    }
+    num = 16;
+    if(powerof4(num)) {
+        printf("\n%d is power of 4", num);
+    } else {
+        printf("\n%d is NOT a power of 4", num);
     }
     uint32_t n = 43261596;
     uint32_t result = reverseBits(n);

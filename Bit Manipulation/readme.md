@@ -7,3 +7,4 @@ In this I have convered the basic bit manipulation operations in C.
 6. Count unset bits
 7. Power of 2: Unique property
 8. Reverse bits
+9. Power of 4
